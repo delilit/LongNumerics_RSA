@@ -1,0 +1,14 @@
+E:\Learn\Алгоритмы\LongNumerics_RSA\bin\Debug\net9.0\LongNumerics_RSA.exe
+E:\Learn\Алгоритмы\LongNumerics_RSA\bin\Debug\net9.0\LongNumerics_RSA.deps.json
+E:\Learn\Алгоритмы\LongNumerics_RSA\bin\Debug\net9.0\LongNumerics_RSA.runtimeconfig.json
+E:\Learn\Алгоритмы\LongNumerics_RSA\bin\Debug\net9.0\LongNumerics_RSA.dll
+E:\Learn\Алгоритмы\LongNumerics_RSA\bin\Debug\net9.0\LongNumerics_RSA.pdb
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.GeneratedMSBuildEditorConfig.editorconfig
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.AssemblyInfoInputs.cache
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.AssemblyInfo.cs
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.csproj.CoreCompileInputs.cache
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.dll
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\refint\LongNumerics_RSA.dll
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.pdb
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.genruntimeconfig.cache
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\ref\LongNumerics_RSA.dll
