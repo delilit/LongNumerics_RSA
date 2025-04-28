@@ -12,3 +12,4 @@ E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\refint\LongNumeric
 E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.pdb
 E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.genruntimeconfig.cache
 E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\ref\LongNumerics_RSA.dll
+E:\Learn\Алгоритмы\LongNumerics_RSA\obj\Debug\net9.0\LongNumerics_RSA.sourcelink.json

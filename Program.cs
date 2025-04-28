@@ -1,2 +1,7 @@
-﻿// See https://aka.ms/new-console-template for more information
-Console.WriteLine("Hello, World!");
+﻿using Longnumerics;
+class Program{
+    static void Main(){
+        BigInt big = new BigInt("12344123");
+        big.print();
+    }
+}
