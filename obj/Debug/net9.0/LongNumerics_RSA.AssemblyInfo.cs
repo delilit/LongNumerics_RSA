@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("LongNumerics_RSA")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f915da1bb59ccf9a4e69eef2cb8ca42726a31f96")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a44197ec96afead8223ee1eb08c7f79ae46213c5")]
 [assembly: System.Reflection.AssemblyProductAttribute("LongNumerics_RSA")]
 [assembly: System.Reflection.AssemblyTitleAttribute("LongNumerics_RSA")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
