@@ -4,6 +4,21 @@ class Program{
     static void Main(){
         Tester test = new Tester();
         test.testing();
-        Console.WriteLine($"{20.CompareTo(1)}");
+        BigInt p = new BigInt("61");
+        BigInt q = new BigInt("53");
+        BigInt n = p * q; // 3233
+        BigInt phi = (p - new BigInt("1")) * (q - new BigInt("1"));
+
+        BigInt e = new BigInt("17");
+        BigInt d = BigInt.ModInverse(e, phi);
+
+        BigInt message = new BigInt("42");
+
+        BigInt encrypted = BigInt.ModPow(message, e, n);
+        Console.Write("Encrypted: "); encrypted.print();
+
+        BigInt decrypted = BigInt.ModPow(encrypted, d, n);
+        Console.Write("Decrypted: "); decrypted.print();
+
     }
 }
