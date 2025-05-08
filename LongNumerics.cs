@@ -333,22 +333,38 @@ private static int CompareAbs(int[] a, int[] b)
     }
     return 0;
 }
-public static BigInt ModPow(BigInt baseValue, BigInt exponent, BigInt modulus)
+public static BigInt ModPow(BigInt baseValue, BigInt exponent, BigInt modulus) //Алгоритм быстрого возведения в степень является необходимостью.
 {
     BigInt result = new BigInt("1");
-    baseValue = baseValue % modulus;
+    baseValue = baseValue % modulus; // по свойствам остатков мы имеем право работать чисто с ними, ибо умножение чисел и остатков в нашем случае есть одно и то же.
 
     while (exponent != new BigInt("0"))
     {
-        if ((exponent.digits[^1] % 2) == 1) // если последняя цифра нечетная
+        if ((exponent.digits[^1] % 2) == 1)
             result = (result * baseValue) % modulus;
+            if (exponent == new BigInt("1")) return result; //ещё одна оптимизация, созданная для того, чтобы не делать лишние операции умножения.
 
-        exponent = exponent / new BigInt("2");
+        exponent = exponent / new BigInt("2");        
         baseValue = (baseValue * baseValue) % modulus;
     }
 
     return result;
 }
+// Слишком медленно
+
+// public static BigInt ModPow(BigInt baseValue, BigInt exponent, BigInt modulus)
+// {
+//     baseValue = baseValue % modulus;
+
+//     while (exponent != new BigInt("0"))
+//     {
+//         exponent = exponent - new BigInt("1");
+//         baseValue = (baseValue * baseValue);
+//     }
+
+//     return baseValue % modulus;
+// }
+
 public static BigInt ModInverse(BigInt a, BigInt m)
 {
     BigInt x, y;
