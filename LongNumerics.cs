@@ -394,8 +394,5 @@ private static BigInt ExtendedGCD(BigInt a, BigInt b, out BigInt x, out BigInt y
     y = x1 - (a / b) * y1;
     return gcd;
 }
-
-
-
 }
 }
