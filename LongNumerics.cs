@@ -379,7 +379,7 @@ public static BigInt ModInverse(BigInt a, BigInt m)
 
     return x % m;
 }
-private static BigInt ExtendedGCD(BigInt a, BigInt b, out BigInt x, out BigInt y)
+public static BigInt ExtendedGCD(BigInt a, BigInt b, out BigInt x, out BigInt y)
 {
     if (b == new BigInt("0"))
     {

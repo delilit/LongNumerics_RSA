@@ -6,13 +6,15 @@ using Testes;
 class Program{
     static void Main(){
         
-        StreamReader sr = new StreamReader("E:\\Learn\\Алгоритмы\\lb2\\example.txt");
+        StreamReader sr = new StreamReader("D:\\Learn\\Алгосы\\LR2\\message.txt");
         string line = sr.ReadLine();
-        BigInt numeric = new BigInt(line);
+        BigInt message = new BigInt(line);
+
         
         int number = 3;
         int[] numbers = new int[] {0, 0};
 
+        //Получение простых множителей
         while (true){
         
             if (is_prime(number)){
@@ -21,8 +23,31 @@ class Program{
             }    
             number += 1;
             BigInt result = new BigInt((numbers[0] * numbers[1]).ToString());
-            if (result > numeric) {break;}
+            if (result > message) {break;}
             }
+
+
+        BigInt p = new BigInt(numbers[0].ToString());
+        BigInt q = new BigInt(numbers[1].ToString());
+        BigInt n = p * q;
+        BigInt phi = (p - new BigInt("1")) * (q - new BigInt("1"));
+        BigInt e = new BigInt("3");
+
+
+        BigInt y = new BigInt("0");
+        BigInt x = new BigInt("0");
+        while (BigInt.ExtendedGCD(e, phi, out x, out y) != new BigInt("1"))
+        {
+            e += new BigInt("2"); // e должно быть нечетным (кроме 2)
+        }
+        BigInt d = BigInt.ModInverse(e, phi);
+
+        
+        BigInt encrypted = BigInt.ModPow(message, e, n);
+        Console.Write("Encrypted: "); encrypted.print();
+
+        BigInt decrypted = BigInt.ModPow(encrypted, d, n);
+        Console.Write("Decrypted: "); decrypted.print();
         }
         
     public static bool is_prime(int number){
@@ -33,7 +58,6 @@ class Program{
         }
         return true;
     }
-    
     
         // Tester test = new Tester();
         // test.testing();

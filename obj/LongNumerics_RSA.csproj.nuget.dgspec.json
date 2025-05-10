@@ -1,25 +1,31 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Learn\\Алгоритмы\\lb2\\LongNumerics_RSA.csproj": {}
+    "D:\\Learn\\Алгосы\\LR2\\LongNumerics_RSA.csproj": {}
   },
   "projects": {
-    "E:\\Learn\\Алгоритмы\\lb2\\LongNumerics_RSA.csproj": {
+    "D:\\Learn\\Алгосы\\LR2\\LongNumerics_RSA.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Learn\\Алгоритмы\\lb2\\LongNumerics_RSA.csproj",
+        "projectUniqueName": "D:\\Learn\\Алгосы\\LR2\\LongNumerics_RSA.csproj",
         "projectName": "LongNumerics_RSA",
-        "projectPath": "E:\\Learn\\Алгоритмы\\lb2\\LongNumerics_RSA.csproj",
-        "packagesPath": "C:\\Users\\Delilith\\.nuget\\packages\\",
-        "outputPath": "E:\\Learn\\Алгоритмы\\lb2\\obj\\",
+        "projectPath": "D:\\Learn\\Алгосы\\LR2\\LongNumerics_RSA.csproj",
+        "packagesPath": "C:\\Users\\Aleksey\\.nuget\\packages\\",
+        "outputPath": "D:\\Learn\\Алгосы\\LR2\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "E:\\Tools\\shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\Delilith\\AppData\\Roaming\\NuGet\\NuGet.Config"
+          "C:\\Users\\Aleksey\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net9.0"
         ],
         "sources": {
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,7 +65,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.202/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.203/PortableRuntimeIdentifierGraph.json"
         }
       }
     }
