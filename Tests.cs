@@ -411,6 +411,47 @@ namespace Testes{
                 }
                 catch (Exception){}
             }
+            // Test 11 ExtendedGCD testing.
+            {
+                BigInt x = new BigInt("0");
+                BigInt y = new BigInt("0");
+                BigInt big_1 = new BigInt("200");
+                BigInt big_2 = new BigInt("51");
+                BigInt big_3 = new BigInt("90");
+
+                if (BigInt.ExtendedGCD(big_1, big_2, out x, out y) != new BigInt("1")){
+                    Console.WriteLine("Not passed a test 11.1\n");
+                    return;
+                }
+                if (x != new BigInt("-13") || y != new BigInt("51")){
+                    Console.WriteLine("Not passed a test 11.2\n");
+                    return;
+                }
+                if (BigInt.ExtendedGCD(big_1, big_3, out x, out y) != new BigInt("10")){
+                    Console.WriteLine("Not passed a test 11.3\n");
+                    return;
+                }
+            }
+            // Test 12 ModPow testing.
+            {
+                BigInt big_1 = new BigInt("2");
+                BigInt big_2 = new BigInt("3");
+                BigInt big_3 = new BigInt("4");
+                BigInt big_4 = new BigInt("5");
+                BigInt big_5 = new BigInt("6");
+                if (BigInt.ModPow(big_1, big_2, big_3) != new BigInt("0")){ // 2^3 mod 4 = 0
+                    Console.WriteLine("Not passed a test 12.1\n");
+                    return;
+                }
+                if (BigInt.ModPow(big_1, big_4, big_2) != new BigInt("2")){ // 2^5 mod 3 = 0
+                    Console.WriteLine("Not passed a test 12.2\n");
+                    return;
+                }
+                if (BigInt.ModPow(big_1, big_5, big_5) != new BigInt("4")){ // 2^6 mod 6 = 4
+                    Console.WriteLine("Not passed a test 12.3\n");
+                    return;
+                }
+            }
 }
 }
 }
