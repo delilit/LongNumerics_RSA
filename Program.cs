@@ -5,6 +5,9 @@ using Longnumerics;
 using Testes;
 class Program{
     static void Main(){
+        // Запустить тесты
+        Tester test = new Tester();
+        test.testing();
         
         StreamReader sr = new StreamReader("D:\\Learn\\Алгосы\\LR2\\message.txt");
         string line = sr.ReadLine();
@@ -14,7 +17,6 @@ class Program{
         int number = 3;
         int[] numbers = new int[] {0, 0};
 
-        //Получение простых множителей
         while (true){
         
             if (is_prime(number)){
@@ -38,7 +40,7 @@ class Program{
         BigInt x = new BigInt("0");
         while (BigInt.ExtendedGCD(e, phi, out x, out y) != new BigInt("1"))
         {
-            e += new BigInt("2"); // e должно быть нечетным (кроме 2)
+            e += new BigInt("2");
         }
         BigInt d = BigInt.ModInverse(e, phi);
 

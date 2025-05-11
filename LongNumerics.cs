@@ -364,21 +364,6 @@ public static BigInt ModPow(BigInt baseValue, BigInt exponent, BigInt modulus) /
 
 //     return baseValue % modulus;
 // }
-
-public static BigInt ModInverse(BigInt a, BigInt m)
-{
-    BigInt x, y;
-    BigInt g = ExtendedGCD(a, m, out x, out y);
-    
-    if (g != new BigInt("1"))
-        throw new ArgumentException("Inverse does not exist (GCD != 1).");
-
-    // Приводим x к положительному остатку
-    if (x.isNegative)
-        x = (x + m);
-
-    return x % m;
-}
 public static BigInt ExtendedGCD(BigInt a, BigInt b, out BigInt x, out BigInt y)
 {
     if (b == new BigInt("0"))
@@ -393,6 +378,20 @@ public static BigInt ExtendedGCD(BigInt a, BigInt b, out BigInt x, out BigInt y)
     x = y1;
     y = x1 - (a / b) * y1;
     return gcd;
+}
+
+public static BigInt ModInverse(BigInt a, BigInt m)
+{
+    BigInt x, y;
+    BigInt g = ExtendedGCD(a, m, out x, out y);
+    
+    if (g != new BigInt("1"))
+        throw new ArgumentException("Inverse does not exist (GCD != 1).");
+
+    if (x.isNegative)
+        x = (x + m);
+
+    return x % m;
 }
 }
 }

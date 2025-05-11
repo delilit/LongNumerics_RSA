@@ -375,6 +375,42 @@ namespace Testes{
                     return;
                 }
             }
+            {
+                // Test 10 ModInverse testing.
+                BigInt big_1 = new BigInt("200");
+                BigInt big_2 = new BigInt("51");
+                BigInt big_3 = new BigInt("9");
+                BigInt big_4 = new BigInt("11");
+                BigInt big_5 = new BigInt("88");
+                BigInt big_6 = new BigInt("15");
+
+                if (BigInt.ModInverse(big_1, big_2) != new BigInt("38")){
+                    Console.WriteLine("Not passed a test 10.1\n");
+                    return;
+                }
+                if (BigInt.ModInverse(big_1, big_3) != new BigInt("5")){
+                    Console.WriteLine("Not passed a test 10.2\n");
+                    return;
+                }
+                if (BigInt.ModInverse(big_1, big_4) != new BigInt("6")){
+                    Console.WriteLine("Not passed a test 10.3\n");
+                    return;
+                }
+                try{
+                if (BigInt.ModInverse(big_1, big_5) != new BigInt("2")){
+                    Console.WriteLine("Not passed a test 10.4\n");
+                    return;
+                }
+                }
+                catch (Exception){}
+                try{
+                if (BigInt.ModInverse(big_1, big_6) != new BigInt("2")){
+                    Console.WriteLine("Not passed a test 10.5\n");
+                    return;
+                }
+                }
+                catch (Exception){}
+            }
 }
 }
 }
