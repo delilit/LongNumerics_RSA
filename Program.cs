@@ -1,10 +1,12 @@
-﻿using System.Globalization;
+﻿using System;
+using System.Text;
+using System.Globalization;
 using System.Numerics;
 using System.Reflection.Metadata.Ecma335;
 using Longnumerics;
 using Testes;
 class Program{
-    static void Main(){
+    static void drain(){
         // Запустить тесты
         Tester test = new Tester();
         test.testing();
@@ -60,23 +62,32 @@ class Program{
         }
         return true;
     }
-    
-        // Tester test = new Tester();
-        // test.testing();
-        
-        // BigInt p = new BigInt("61");
-        // BigInt q = new BigInt("53");
-        // BigInt n = p * q; // 3233
-        // BigInt phi = (p - new BigInt("1")) * (q - new BigInt("1"));
+    static void Main(){
+        Encoding ascii = Encoding.ASCII;
+        String unicodeString =
+          "This unicode string contains two characters " +
+          "with codes outside the ASCII code range, " +
+          "Pi (\u03a0) and Sigma (\u03a3).";
+      Console.WriteLine("Original string:");
+      Console.WriteLine(unicodeString);
 
-        // BigInt e = new BigInt("11");
-        // BigInt d = BigInt.ModInverse(e, phi);
+      // Save the positions of the special characters for later reference.
+      int indexOfPi = unicodeString.IndexOf('\u03a0');
+      int indexOfSigma = unicodeString.IndexOf('\u03a3');
 
-        // BigInt message = new BigInt("43");
+      // Encode the string.
+      Byte[] encodedBytes = ascii.GetBytes(unicodeString);
+      Console.WriteLine();
+      Console.WriteLine("Encoded bytes:");
+      foreach (Byte b in encodedBytes) 
+      {
+          Console.Write($"[{b}]");
+      }
+      Console.WriteLine();
 
-        // BigInt encrypted = BigInt.ModPow(message, e, n);
-        // Console.Write("Encrypted: "); encrypted.print();
-
-        // BigInt decrypted = BigInt.ModPow(encrypted, d, n);
-        // Console.Write("Decrypted: "); decrypted.print();
+      String decodedString = ascii.GetString(encodedBytes);
+      Console.WriteLine();
+      Console.WriteLine("Decoded bytes:");
+      Console.WriteLine(decodedString);
+    }
     }
